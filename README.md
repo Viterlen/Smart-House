@@ -1,2 +1,2 @@
 # Smart-House
-System obsługujący inteligentny 
+System obsługujący inteligentny dom.
