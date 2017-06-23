@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>termometr.jpg</file>
+        <file>zar.jpg</file>
+        <file>krop.jpg</file>
+    </qresource>
+</RCC>
