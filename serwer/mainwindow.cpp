@@ -43,7 +43,10 @@ void MainWindow::on_pushButton_clicked()
 }
 
 void MainWindow::on_spinBox_valueChanged(int arg1)
-{
+{   
+    int minval = ui->spinBox->value(), maxval = ui->spinBox_2->value();
+    if(minval>maxval)
+        ui->spinBox_2->setValue(minval);
     if(widok == slaves.end())
         return;
     qDebug() << arg1;
@@ -52,6 +55,10 @@ void MainWindow::on_spinBox_valueChanged(int arg1)
 
 void MainWindow::on_spinBox_2_valueChanged(int arg1)
 {
+    int minval = ui->spinBox->value(), maxval = ui->spinBox_2->value();
+    if(minval>maxval)
+        ui->spinBox->setValue(maxval);
+    
     if(widok == slaves.end())
         return;
     widok->setMax(Slave::Temp, arg1);
@@ -59,6 +66,11 @@ void MainWindow::on_spinBox_2_valueChanged(int arg1)
 
 void MainWindow::on_spinBox_3_valueChanged(int arg1)
 {
+    
+        int minval = ui->spinBox_3->value(), maxval = ui->spinBox_4->value();
+    if(minval>maxval)
+        ui->spinBox_4->setValue(minval);
+    
     if(widok == slaves.end())
         return;
     widok->setMin(Slave::Jasn, arg1);
@@ -66,6 +78,9 @@ void MainWindow::on_spinBox_3_valueChanged(int arg1)
 
 void MainWindow::on_spinBox_4_valueChanged(int arg1)
 {
+        int minval = ui->spinBox_3->value(), maxval = ui->spinBox_4->value();
+    if(minval>maxval)
+        ui->spinBox_3->setValue(maxval);
     if(widok == slaves.end())
         return;
     widok->setMax(Slave::Jasn, arg1);
@@ -73,6 +88,11 @@ void MainWindow::on_spinBox_4_valueChanged(int arg1)
 
 void MainWindow::on_spinBox_5_valueChanged(int arg1)
 {
+    
+        int minval = ui->spinBox_5->value(), maxval = ui->spinBox_6->value();
+    if(minval>maxval)
+        ui->spinBox_6->setValue(minval);
+    
     if(widok == slaves.end())
         return;
     widok->setMin(Slave::Wilg, arg1);
@@ -80,6 +100,9 @@ void MainWindow::on_spinBox_5_valueChanged(int arg1)
 
 void MainWindow::on_spinBox_6_valueChanged(int arg1)
 {
+        int minval = ui->spinBox_5->value(), maxval = ui->spinBox_6->value();
+    if(minval>maxval)
+        ui->spinBox_5->setValue(maxval);
     if(widok == slaves.end())
         return;
     widok->setMax(Slave::Wilg, arg1);
